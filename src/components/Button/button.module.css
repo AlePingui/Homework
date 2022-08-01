@@ -1,0 +1,90 @@
+/* Rounded */
+.rounded4 {
+    --border-radius: 4px;
+}
+
+.rounded8 {
+    --border-radius: 8px;
+}
+
+.rounded10 {
+    --border-radius: 10px;
+}
+
+.rounded12 {
+    --border-radius: 12px;
+}
+
+.rounded14 {
+    --border-radius: 14px;
+}
+
+/* Theme */
+
+.primary {
+    --background-color: #3E95FB;
+    --background-hover: #287ebf;
+    --color: #fff;
+}
+
+.info {
+    --background-color: #17a2b8;
+    --background-hover: #138496;
+    --color: #fff;
+}
+
+.success {
+    --background-color: #28a745;
+    --background-hover: #218838;
+    --color: #fff;
+}
+
+.warning {
+    --background-color: #ffc107;
+    --background-hover: #e0a800;
+    --color: #fff;
+}
+
+.danger {
+    --background-color: #dc3545;
+    --background-hover: #c82333;
+    --color: #fff;
+}
+
+.dark {
+    --background-color: #343a40;
+    --background-hover: #23272b;
+    --color: #fff;
+}
+
+.secondary {
+    --background-color: #6c757d;
+    --background-hover: #5a6268;
+    --color: #fff;
+}
+
+.light {
+    --background-color: #f8f9fa;
+    --background-hover: #e2e6ea;
+    --color: #343a40;
+}
+
+/* Button */
+.btn {
+    background-color: var(--background-color);
+    color: var(--color);
+    border-radius: var(--border-radius);
+    padding: 3px 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--background-hover);
+}
+
+.largeButton {
+    padding: 7px 22px;
+}
+

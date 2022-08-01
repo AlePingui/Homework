@@ -1,0 +1,144 @@
+/* Topbar */
+.start {
+    --justify: start;
+}
+
+.center {
+    --justify: center;
+}
+
+.end {
+    --justify: end;
+}
+
+.between {
+    --justify: space-between;
+}
+
+.topbar {
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 4px #eee;
+    display: flex;
+    align-items: center;
+    justify-content: var(--justify);
+    padding: 0 35px;
+}
+
+.topbar svg {
+    cursor: pointer;
+}
+
+/* Topbar Body */
+.topbarBody {
+    flex-grow: 1;
+    display: flex;
+}
+
+/* Brand */
+.brand {
+    flex-basis: 200px;
+    flex-shrink: 0;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: #222;
+    user-select: none;
+}
+
+.brand button {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+}
+
+.brand svg {
+    font-size: 40px;
+    color: #3E95FB;
+}
+
+/* .brand a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 700;
+} */
+
+.brand a img {
+    height: 36px;
+    margin-top: 9px;
+}
+
+/* Search */
+.topbarSearch {
+    flex-grow: 1;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    /* font-size: 28px; */
+}
+
+.topbarSearch input {
+    flex-grow: 1;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.topbarSearch div {
+    flex-basis: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-right: 1px solid #bbb;
+    height: 40px;
+    padding-right: 10px;
+}
+
+.topbarSearch div .addButton {
+    font-size: 28px;
+    border: none;
+    background: none;
+    display: flex;
+    padding: 0;
+}
+
+/* Utilities */
+.topbarUtilities {
+    flex-basis: 150px;
+    flex-shrink: 0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.topbarUtilities button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topbarUtilities button span {
+    margin-top: 7px;
+    margin-right: 7px;
+    font-weight: 400;
+}
+
+.topbarUtilities button svg {
+    font-size: 30px;
+}
+
+/* Para los subtitulos y otros q no destaquen, mas q nada va en las targetas */
+/* font-family: 'Be Vietnam Pro', sans-serif; */

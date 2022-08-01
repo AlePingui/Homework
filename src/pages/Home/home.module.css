@@ -1,0 +1,26 @@
+.Home {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "lateralMenu outlet";
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+}
+
+.HomeCollapse {
+    grid-template-columns: 60px 1fr;
+}
+
+.Topbar {
+    grid-area: header;
+}
+
+.LateralMenu {
+    grid-area: lateralMenu;
+}
+
+.Outlet {
+    grid-area: outlet;
+    background-color: red;
+}

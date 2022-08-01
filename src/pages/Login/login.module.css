@@ -1,0 +1,120 @@
+:root {
+    --background-body: #fff;
+    --primary-color: #3E95FB;
+}
+
+.form {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-body);
+}
+
+.loginbox {
+    height: 500px;
+    width: 400px;
+    padding: 25px 40px;
+    box-sizing: border-box;
+    border: 1.5px solid #DDD;
+    box-shadow: 0 0 1px #CCC;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.body {
+    flex-grow: 1;
+}
+
+.body h2 {
+    margin: 0 0 15px;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Field Checkbox */
+
+.fieldCheck {
+    margin-top: 15px;
+}
+
+.fieldCheck label {
+    display: flex;
+    position: relative;
+    align-items: center;
+    user-select: none;
+}
+
+.fieldCheck label input {
+    display: none;
+}
+
+.fieldCheck .remindless::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    margin-right: 5px;
+}
+
+.remindlessIcon {
+    display: none;
+}
+
+/* Field checked */
+.fieldCheck .remind::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    margin-right: 5px;
+}
+
+.remindIcon {
+    position: absolute;
+    color: #fff;
+    top: 4px;
+    left: 2px;
+}
+
+/* Button */
+.button {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    border: none;
+    background-color: var(--primary-color);
+    font-size: 23px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #307dd6;
+}
+
+/* .button a {
+    text-decoration: none;
+    color: #fff;
+} */
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}

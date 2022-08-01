@@ -1,0 +1,56 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Main */
+.main {
+    margin-top: 40px;
+    flex-grow: 1;
+}
+
+.headingTitle {
+    font-size: 3.6rem;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.description p {
+    text-align: center;
+    width: 90%;
+    margin: 16px auto 24px;
+    color: #6c757d;
+}
+
+.description div {
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+.footer {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343a40;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    line-height: 1.5;
+}
+
+.footer a:hover {
+    color: #ddd;
+}
+
+.footer svg {
+    font-size: 1.3rem;
+    margin: 0 2px;
+}
