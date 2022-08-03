@@ -9,7 +9,7 @@ import { MENU_ITEMS, SUBJECTS } from './data';
 function List ({ arr }) {
     const { collapse } = useContext(Context);
     
-    return <ul className={arr ? styles.ListCollapse : ''}>
+    return <ul className={collapse ? styles.listCollapse : ''}>
         {arr.map(({title, icon}) => (
             <MenuItem key={title} title={title} icon={icon} />
         ))}

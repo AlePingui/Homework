@@ -47,3 +47,17 @@
 .content ul li a:hover {
     color: #555;
 }
+
+.listCollapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listCollapse li {
+    padding: 8px 0;
+}
+
+.listCollapse svg {
+    margin-right: 0 !important;
+}
