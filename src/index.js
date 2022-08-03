@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import App from 'App';
+import reportWebVitals from 'reportWebVitals';
+import 'index.css';
 
 // Icons
 import { GiPenguin } from 'react-icons/gi';
 import { BiErrorCircle } from 'react-icons/bi';
 
 // Routes
-import Login from './pages/Login';
-import Home from './pages/Home';
-import Tareas from './pages/Tareas';
+import Login from 'pages/Login';
+import Home from 'pages/Home';
+import Tareas from 'pages/Tareas';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

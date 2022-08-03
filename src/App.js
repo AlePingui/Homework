@@ -1,8 +1,8 @@
-import { Nav, Brand } from './components/Topbar';
-import { Button } from './components/Button';
+import { Nav, Brand } from 'components/Topbar';
+import { Button } from 'components/Button';
 import { useNavigate } from 'react-router-dom';
 import { BsCode, BsCodeSlash } from 'react-icons/bs';
-import styles from './app.module.css';
+import styles from 'app.module.css';
 
 function App() {
     let navigate = useNavigate();

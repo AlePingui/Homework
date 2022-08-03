@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import LateralMenu from '../../components/LateralMenu';
-import Topbar from '../../components/Topbar';
+import LateralMenu from 'components/LateralMenu';
+import Topbar from 'components/Topbar';
 import styles from './home.module.css';
-import Context from '../../context/collapseContext';
+import Context from 'context/collapseContext';
 
 function Home () {
     const [collapse, setCollapse] = useState(false);

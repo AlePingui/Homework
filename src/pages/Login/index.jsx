@@ -1,6 +1,6 @@
 import { Formik, Form, Field } from 'formik';
 import { Link, useNavigate } from 'react-router-dom';
-import FieldForm from '../../components/Field';
+import FieldForm from 'components/Field';
 import styles from './login.module.css';
 import { BsCheckLg } from 'react-icons/bs';
 import { useRef, useEffect } from 'react';

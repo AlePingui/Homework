@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styles from './lateralmenu.module.css';
 import MenuItem from '../MenuItem';
-import Context from '../../context/collapseContext';
+import Context from 'context/collapseContext';
 
 // Data Arrays
 import { MENU_ITEMS, SUBJECTS } from './data';
