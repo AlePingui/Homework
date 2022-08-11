@@ -3,6 +3,7 @@
     grid-template-rows: 30px 1fr;
     grid-row-gap: 20px;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .TareasHeader {
@@ -12,15 +13,17 @@
     padding: 3px 0;
 }
 
-.TareasHeader a {
+.TareasHeader button {
     color: #ddd;
     font-family: 'Be Vietnam Pro', sans-serif;
     text-decoration: none;
     margin: 0 7px;
     font-size: 13px;
+    border: 0;
+    background: none;
 }
 
-.TareasHeader a:hover {
+.TareasHeader button:hover {
     color: #bbb;
 }
 
@@ -30,4 +33,3 @@
     grid-gap: 30px;
     justify-content: center;
 }
-

@@ -1,26 +1,38 @@
 import styles from './tareas.module.css';
-import Card from 'components/Card';
-import { LIST_CARDS } from './listcards';
+import { useSearchParams } from 'react-router-dom';
+import Lista from 'pages/TareasFiltradas';
+
+// Voy a hacer q el map sea un componente aparte con un estado que sea el array
+// y que cuando hago click en todas, asignadas u otro que cambie la funcion,
+// la funcion se va a llamar dentro del estado con un useEffect()
+
+// al final lo que voy a hacer es separar la lista en un componente aparte
+// que va a ser una pagina, entonces aca importo link y uso los parametros
+// de react router para que cuando se haga click en Todas vaya a /home/tareas?filter=Todas
+// y en ese componente tareas filtradas, va a tener la funcion de getTask
+// y el argumento de esta va a ser el parametro de la url
 
 function Tareas() {
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    function handleClick(filter = "Todas") {
+        if(filter) {
+            setSearchParams({ filter });
+        } else {
+            setSearchParams({});
+        }
+    }
+
     return(
         <div className={styles.Tareas}>
             <div className={styles.TareasHeader}>
-                <a href="#">Asignadas</a>
-                <a href="#">Pendientes</a>
-                <a href="#">Completadas</a>
+                <button onClick={() => handleClick("Todas")}>Todas</button>
+                <button onClick={() => handleClick("Asignadas")}>Asignadas</button>
+                <button onClick={() => handleClick("Pendientes")}>Pendientes</button>
+                <button onClick={() => handleClick("Completadas")}>Completadas</button>
             </div>
             <div className={styles.TareasContent}>
-               {LIST_CARDS.map(item => (
-                   <Card
-                        state={item.state}
-                        date={item.date}
-                        title={item.title}
-                        subject={item.subject}
-                        cardType={item.cardType}
-                        key={item.key}
-                    />
-               ))}
+               <Lista filter={searchParams.get("filter")} />
             </div>
         </div>
     );

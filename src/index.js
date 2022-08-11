@@ -20,6 +20,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/login" element={<Login isLogged={true} />} />
+        <Route path="/signup" element={<Login isLogged={false} />} />
         <Route path='/home' element={<Home />}>
           <Route
             index
@@ -41,8 +43,6 @@ root.render(
           />
           <Route path="tareas" element={<Tareas />}/>
         </Route>
-        <Route path="/login" element={<Login isLogged={true} />} />
-        <Route path="/signup" element={<Login isLogged={false} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
