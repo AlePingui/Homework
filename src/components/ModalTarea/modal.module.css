@@ -1,0 +1,118 @@
+:root {
+    --blue-color: #0a97cf;
+}
+
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000a;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalDialog {
+    background-color: #fff;
+    border-radius: 12px;
+    height: 60%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.modalHeader {
+    background-color: #3E95FB;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 0;
+    text-align: center;
+    letter-spacing: 1.2;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.modalHeader h3 {
+    margin: 0;
+}
+
+/* Body */
+
+.modalBody {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input styles */
+.input {
+    height: 34px;
+    margin: 10px 0;
+    width: 70%;
+}
+
+.input label {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #444;
+    border-radius: 4px;
+    position: relative;
+}
+
+.input label input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8px;
+    border: none;
+    outline: none;
+    margin-top: 8px;
+}
+
+.input label span {
+    position: absolute;
+    font-size: .9rem;
+    padding: 0 1px;
+    left: 7px;
+    top: 7px;
+    color: #999;
+}
+
+/* Input animation */
+.active label {
+    animation: colorChange .3s forwards;
+}
+
+@keyframes colorChange {
+    to {
+        border-color: var(--blue-color);
+    }
+}
+
+.active label span {
+    animation: spanChange .3s  forwards;
+}
+
+@keyframes spanChange {
+    to {
+        color: var(--blue-color);
+        font-size: .7rem;
+        top: -9px;
+        background-color: #fff;
+    }
+}
+
+/* Footer */
+
+.modalFooter {
+    padding: 10px;
+    text-align: right;
+}
+
+.modalFooter button:first-child {
+    margin-right: 10px;
+}

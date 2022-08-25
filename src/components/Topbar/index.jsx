@@ -7,6 +7,8 @@ import logo from '../../images/logo.png';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { BsFilePlus } from 'react-icons/bs';
 import { HiMenu } from 'react-icons/hi';
+import ModalTarea from 'components/ModalTarea';
+import { MATERIAS } from './materias';
 
 function justifyClass (justify) {
     let res = (
@@ -38,32 +40,41 @@ export function Nav ({ children, className, justify }) {
 
 export default function Topbar({ username, onClick, className }) {
     const [searchValue, changeSearchValue] = useState('');
+    const [isModal, setModal] = useState(false);
+
+    const handleClick = () => setModal(prevState => !prevState);
+
     return(
-        <Nav className={className}>
-            {/* Parte de la navegación */}
-            <div className={styles.topbarBody}>
-                <Brand path="/home" onClick={onClick} isMenuEnabled={true} />
-                <div className={styles.topbarSearch}>
-                    <input
-                        type="text"
-                        value={searchValue}
-                        onChange={(e) => changeSearchValue(e.target.value)}
-                        placeholder="Buscar Tarea..."
-                    />
-                    <div>
-                        <button className={styles.addButton}>
-                            <BsFilePlus />
-                        </button>
+        <>
+            <Nav className={className}>
+                {/* Parte de la navegación */}
+                <div className={styles.topbarBody}>
+                    <Brand path="/home" onClick={onClick} isMenuEnabled={true} />
+                    <div className={styles.topbarSearch}>
+                        <input
+                            type="text"
+                            value={searchValue}
+                            onChange={(e) => changeSearchValue(e.target.value)}
+                            placeholder="Buscar Tarea..."
+                        />
+                        <div>
+                            <button onClick={handleClick} className={styles.addButton}>
+                                <BsFilePlus />
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Parte de opciones de usuario */}
-            <div className={styles.topbarUtilities}>
-                <button>
-                    <span>{username}</span> <FaRegUserCircle />
-                </button>
-            </div>
-        </Nav>
+                {/* Parte de opciones de usuario */}
+                <div className={styles.topbarUtilities}>
+                    <button>
+                        <span>{username}</span> <FaRegUserCircle />
+                    </button>
+                </div>
+            </Nav>
+            { isModal &&
+                <ModalTarea materias={MATERIAS} />
+            }
+        </>
     );
 }
