@@ -1,5 +1,5 @@
 :root {
-    --blue-color: #0a97cf;
+    --input-active: #0891c7;
 }
 
 .modal {
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.modalDialog {
+.modal__dialog {
     background-color: #fff;
     border-radius: 12px;
     height: 60%;
@@ -25,7 +25,7 @@
 
 /* Header */
 
-.modalHeader {
+.modal__header {
     background-color: #3E95FB;
     border-radius: 10px 10px 0 0;
     padding: 10px 0;
@@ -35,84 +35,105 @@
     flex-shrink: 0;
 }
 
-.modalHeader h3 {
+.modal__header h3 {
     margin: 0;
 }
 
 /* Body */
 
-.modalBody {
+.modal__body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px 15%;
+    box-sizing: border-box;
+}
+
+.modal__body form {
+    width: 100%;
 }
 
 /* Input styles */
-.input {
-    height: 34px;
-    margin: 10px 0;
-    width: 70%;
+
+.input, .fileinput {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
 }
 
-.input label {
-    height: 100%;
+.input label, .fileinput label {
     width: 100%;
-    display: inline-block;
-    border: 1px solid #444;
+    border: 1px solid #bbb;
     border-radius: 4px;
     position: relative;
+    display: flex;
 }
 
 .input label input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 8px;
     border: none;
     outline: none;
-    margin-top: 8px;
+    font-size: .9rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 11px;
+    border-radius: 4px;
 }
 
 .input label span {
     position: absolute;
+    top: 7px;
+    left: 10px;
+    color: #aaa;
     font-size: .9rem;
     padding: 0 1px;
-    left: 7px;
-    top: 7px;
-    color: #999;
 }
 
-/* Input animation */
-.active label {
-    animation: colorChange .3s forwards;
+/* Input Active */
+
+.input_active label {
+    animation: active_input_label .3s 1 forwards;
 }
 
-@keyframes colorChange {
+.input_active label span {
+    animation: active_input_span .3s 1 forwards;
+}
+
+@keyframes active_input_label { to { border-color: var(--input-active); } }
+@keyframes active_input_span {
     to {
-        border-color: var(--blue-color);
-    }
-}
-
-.active label span {
-    animation: spanChange .3s  forwards;
-}
-
-@keyframes spanChange {
-    to {
-        color: var(--blue-color);
         font-size: .7rem;
         top: -9px;
         background-color: #fff;
+        color: var(--input-active);
     }
 }
 
-/* Footer */
+/* Input File */
 
-.modalFooter {
-    padding: 10px;
-    text-align: right;
+.fileinput label {
+    border: 2px solid var(--input-active);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modalFooter button:first-child {
-    margin-right: 10px;
+.fileinput label input {
+    display: none;
+}
+
+.fileinput label span {
+    color: var(--input-active);
+    font-size: .9rem;
+}
+
+/* Input File Active */
+
+.fileinput_active label {
+    background-color: var(--input-active);
+}
+
+.fileinput_active label span {
+    color: #fff;
 }

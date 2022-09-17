@@ -73,7 +73,7 @@ export default function Topbar({ username, onClick, className }) {
                 </div>
             </Nav>
             { isModal &&
-                <ModalTarea materias={MATERIAS} />
+                <ModalTarea materias={MATERIAS} closeModal={setModal} />
             }
         </>
     );

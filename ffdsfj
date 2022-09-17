@@ -1,0 +1,8 @@
+[33m2b82a49[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m Tooltips agregados
+[33m33c6ad4[m filtro de tareas agregado con useSearchParams
+[33mcede03d[m Tarjetas con diseño
+[33mdb1879b[m Tooltip agregado al lateralmenu
+[33md022d31[m tamaño de iconos en el menú lateral solucionado, error para mostrar el tooltip
+[33mca6caf2[m json.config agregado
+[33m7cc9f7e[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m Primera versión del proyecto con Git
+[33m34ad774[m Initialize project using Create React App
